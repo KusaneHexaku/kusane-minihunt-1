@@ -58,14 +58,7 @@
         <tr>
             <th scope="row ">1</th>
             <td><a href="readBetweenTheLines.html ">Read Between The Lines</a></td>                                    
-            <td>
-<div class="form-group">
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Answer" id="puzzle1" aria-label="Answer" aria-describedby="puzzle1">
-      <button class="btn btn-primary submit" type="button" id="puzzle1Submit">Button</button>
-    </div>
-  </div>
-</div></td>
+            <td></td>
         </tr>
         <tr>
             <th scope="row ">2</th>
@@ -124,32 +117,32 @@
         
     </div>
 
-<script src="https://raw.githubusercontent.com/emn178/js-sha1/master/build/sha1.min.js">
-<script type="text/javascript">
-  var solutions = ['44A6D4FF40EF0D86DFFF7DED32091500CBE4011D'];
-  var hash = sha1.create();
+//<script src="https://raw.githubusercontent.com/emn178/js-sha1/master/build/sha1.min.js">
+//<script type="text/javascript">
+//  var solutions = ['44A6D4FF40EF0D86DFFF7DED32091500CBE4011D'];
+//  var hash = sha1.create();
   
-  $('.submit').click(function()) {
-    var probleminput = '#problem'+$(this).val();
-    var problemid  = ($(this).val()).toString();
-    var ans = $(probleminput).val();
-    ans = ans.replace(/\s/gi, '').toUpperCase();
+//  $('.submit').click(function()) {
+ //   var probleminput = '#problem'+$(this).val();
+//   var problemid  = ($(this).val()).toString();
+//    var ans = $(probleminput).val();
+//    ans = ans.replace(/\s/gi, '').toUpperCase();
     //var enc = encr(ans);
-    hash.update(ans);
+//    hash.update(ans);
     
-    if(hash.hex() === solutions[($(this).val())-1]) {
+ //   if(hash.hex() === solutions[($(this).val())-1]) {
       // Correct
-      $(this).text('Correct!').addClass('solved');
-      $(probleminput).val(ans).prop('disabled', true);
+//      $(this).text('Correct!').addClass('solved');
+ //     $(probleminput).val(ans).prop('disabled', true);
       $(this).prop('disabled', true);
-     
-    } 
-    else {
+ //    
+//    } 
+//    else {
     	// Incorrect
-        $(this).text('Try Again');
-    	$(probleminput).val(&quot;&quot;);
-    }
-  });
+//        $(this).text('Try Again');
+//    	$(probleminput).val(&quot;&quot;);
+//    }
+//  });
   
   // ENCRYPT THE ANSWER
   //function encr(ans){
@@ -169,14 +162,14 @@
   
   
   // PRESS ENTER TO SUBMIT AS WELL
-  $('input').keypress(function (e) {
-    if (e.which == 13) {
-      $(this).next('button').click();
-      return false;
-    }
-	});
+//  $('input').keypress(function (e) {
+//    if (e.which == 13) {
+//      $(this).next('button').click();
+//      return false;
+//    }
+//	});
 
-</script>
+//</script>
 
 
 </body>
