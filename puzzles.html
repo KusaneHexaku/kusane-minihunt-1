@@ -58,7 +58,14 @@
         <tr>
             <th scope="row ">1</th>
             <td><a href="readBetweenTheLines.html ">Read Between The Lines</a></td>                                    
-            <td></td>
+            <td>
+<div class="form-group">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Answer" id="puzzle1" aria-label="Answer" aria-describedby="puzzle1">
+      <button class="btn btn-primary submit" type="button" id="puzzle1Submit">Button</button>
+    </div>
+  </div>
+</div></td>
         </tr>
         <tr>
             <th scope="row ">2</th>
@@ -116,6 +123,63 @@
 
         
     </div>
+
+<script src="https://raw.githubusercontent.com/emn178/js-sha1/master/build/sha1.min.js">
+<script type="text/javascript">
+  var t = 0;
+  var solutions = ['MFYFUBPRVD', 'WWKOEHBPRV', 'TONAELJFXH', 'MHEZAWWBPR', 'DWJQYJFXHB'];
+  var hash = sha1.create();
+  
+  // SUBMIT THE ANSWER
+  $('.submit').click(function(){
+    var probleminput = '#problem'+$(this).val();
+    var problemid  = ($(this).val()).toString();
+    var ans = $(probleminput).val();
+    ans = ans.replace(/\s/gi, '').toUpperCase();
+    //var enc = encr(ans);
+    hash.update(ans);
+    
+    if(hash.hex() === solutions[($(this).val())-1]) {
+      // Correct
+      $(this).text('Correct!').addClass('solved');
+      $(probleminput).val(ans).prop('disabled', true);
+      $(this).prop('disabled', true);
+     
+    } 
+    else {
+    	// Incorrect
+        $(this).text('Try Again');
+    	$(probleminput).val(&quot;&quot;);
+    }
+  });
+  
+  // ENCRYPT THE ANSWER
+  //function encr(ans){
+  //	var en = ""
+ //	for(i = 0; i < ans.length; i ++){
+//    	var a = ((ans.charCodeAt(i) + ans.charCodeAt((i+1) % (ans.length)) - 130) % 26) + 65;
+ //   	en = en.concat(String.fromCharCode(a));
+ //   }
+ //   while(en.length < 10){
+ //   	var sum = 0;
+ //     for (j = 0; j < en.length; j ++)
+//      	sum += en.charCodeAt(j);
+ //   	en = en.concat(String.fromCharCode((sum % 26) + 65));
+ //   }
+ // 	return en;
+//  };
+  
+  
+  // PRESS ENTER TO SUBMIT AS WELL
+  $('input').keypress(function (e) {
+    if (e.which == 13) {
+      $(this).next('button').click();
+      return false;
+    }
+	});
+
+</script>
+
 
 </body>
 
