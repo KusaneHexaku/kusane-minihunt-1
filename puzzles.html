@@ -127,11 +127,10 @@
 <script src="https://raw.githubusercontent.com/emn178/js-sha1/master/build/sha1.min.js">
 <script type="text/javascript">
   var t = 0;
-  var solutions = ['MFYFUBPRVD', 'WWKOEHBPRV', 'TONAELJFXH', 'MHEZAWWBPR', 'DWJQYJFXHB'];
+  var solutions = ['44A6D4FF40EF0D86DFFF7DED32091500CBE4011D'];
   var hash = sha1.create();
   
-  // SUBMIT THE ANSWER
-  $('.submit').click(function(){
+  $('.submit').click(function()) {
     var probleminput = '#problem'+$(this).val();
     var problemid  = ($(this).val()).toString();
     var ans = $(probleminput).val();
