@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kusane Mini Hunt</title>
+    <link href="https://bootswatch.com/4/lux/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <main>
+    //This script is taken from the GPH-site git.
+    <script id="check_answer">
+      
+    window.onload=function() {
+      form = document.getElementsByClassName('call-in-answer-panel')[0]
+      form.onsubmit=function() {
+        right_answer = 'SEPARATION DEGREES'
+        answer = document.getElementById('id_answer').value
+        answer = normalize_puzzle_answer(answer)
+
+        // Remove solved panel if it exists
+        if (document.contains(document.getElementById('solved-panel'))) {
+          document.getElementById("solved-panel").remove();
+        }
+
+        // Create new solved panel
+        node = document.createElement('div')
+        node.setAttribute('id', 'solved-panel')
+        if (answer == normalize_puzzle_answer(right_answer)) {
+          node.innerHTML = "<h4>Solved!</h4><p>The answer was <b>" + right_answer + "</b>.</p>"
+        } else {
+          node.innerHTML = "<h4>Incorrect!</h4>"
+        }
+
+        // Inject it
+        form.parentNode.insertBefore(node, form)
+
+        // Return false to prevent GET request from executing
+        return false;
+      }
+    }
+
+    function normalize_puzzle_answer(answer) {
+      return answer.toUpperCase().replace(/[^A-Z0-9]/g, '')
+    }
+  </script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html" ) ">Call in: Read Between The Lines - Kusane MiniHunt</a>
+            <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarColor01 " aria-controls="navbarColor01 " aria-expanded="false " aria-label="Toggle navigation ">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarColor01 ">
+                <ul class="navbar-nav mr-auto ">
+                    <li class="nav-item ">
+                        <a class="nav-link " href="index.html ">
+                            Home
+                            <span class="sr-only ">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="puzzles.html ">Puzzles</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="howtoplay.html ">How To Play</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="about.html ">About</a>
+                    </li>
+                    
+
+    </div>
+</nav>  
+    <div class="container ">
+<div class="jumbotron ">
+    <h1>Check your answer for Read Between The Lines</h1>
+    <p class="lead text-primary "></p>
+</div>
+<div>
+        <form class="call-in-answer-panel">
+
+        <div class="row">
+            <div class="four columns">
+                <label for="id_answer">Enter your guess:</label>
+            </div>
+            <div class="four columns">
+                <input type="text" name="answer" maxlength="500" required="" id="id_answer">
+
+            </div>
+            <div class="four columns">
+                <button class="btn" type="submit">Submit</button>
+            </div>
+        </div>
+
+    </form>
+
+
+    </div>
+                                 </main>
+</body>
+
+<div class="container body-content ">
+        <hr />
+        <footer>
+            <p>Kusane Hexaku, 2020-<script>document.write(new Date().getFullYear())</script>, there's no hint here.</p>
+        </footer>
+    </div>
+</html>
