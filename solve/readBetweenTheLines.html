@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kusane Mini Hunt</title>
+    <title>Call in: Read Between The Lines - Kusane Mini Hunt</title>
     <link href="https://bootswatch.com/4/lux/bootstrap.min.css" rel="stylesheet" />
 </head>
 
 <body>
   <main>
-    //This script is taken from the GPH-site git.
+
     <script id="check_answer">
-      
+          //This script is taken from the GPH-site git.
     window.onload=function() {
       form = document.getElementsByClassName('call-in-answer-panel')[0]
       form.onsubmit=function() {
@@ -48,7 +48,7 @@
   </script>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="index.html" ) ">Call in: Read Between The Lines - Kusane MiniHunt</a>
+        <a class="navbar-brand" href="index.html" ) ">Kusane MiniHunt</a>
             <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarColor01 " aria-controls="navbarColor01 " aria-expanded="false " aria-label="Toggle navigation ">
                 <span class="navbar-toggler-icon "></span>
             </button>
@@ -56,42 +56,48 @@
             <div class="collapse navbar-collapse " id="navbarColor01 ">
                 <ul class="navbar-nav mr-auto ">
                     <li class="nav-item ">
-                        <a class="nav-link " href="index.html ">
+                        <a class="nav-link " href="../index.html ">
                             Home
                             <span class="sr-only ">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="puzzles.html ">Puzzles</a>
+                        <a class="nav-link " href="../puzzles.html ">Puzzles</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="howtoplay.html ">How To Play</a>
+                        <a class="nav-link " href="../howtoplay.html ">How To Play</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="about.html ">About</a>
+                        <a class="nav-link " href="../about.html ">About</a>
                     </li>
                     
 
     </div>
-</nav>  
-    <div class="container ">
-<div class="jumbotron ">
+</nav>        
+                                                                  <br><br>
+    <div class="four columns">
+        <a href="../readBetweenTheLines.html " class="btn btn-primary">Return to puzzle</button>
+    </div>
+                                                                      <br><br>
+    <div class="container ">                       
+
     <h1>Check your answer for Read Between The Lines</h1>
     <p class="lead text-primary "></p>
-</div>
+
 <div>
         <form class="call-in-answer-panel">
 
         <div class="row">
-            <div class="four columns">
+            <div class="lead text-primary">
                 <label for="id_answer">Enter your guess:</label>
             </div>
-            <div class="four columns">
-                <input type="text" name="answer" maxlength="500" required="" id="id_answer">
+                              <br>
+            <div class="lead text-primary">
+                <input type="text" class="form-control" name="answer" maxlength="500" required="" id="id_answer">
 
             </div>
             <div class="four columns">
-                <button class="btn" type="submit">Submit</button>
+                <button class="btn btn-primary" type="submit">Submit</button>
             </div>
         </div>
 
