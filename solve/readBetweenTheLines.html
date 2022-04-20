@@ -29,7 +29,7 @@
         node = document.createElement('div')
         node.setAttribute('id', 'solved-panel')
         if (answer == normalize_puzzle_answer(right_answer)) {
-          node.innerHTML = "<h3>Solved!</h3><p class="lead text-primary ">The answer was <b>" + right_answer + "</b>.</p><br><br>"
+          node.innerHTML = "<h3>Solved!</h3><p class=\x22lead text-primary \x22>The answer was <b>" + right_answer + "</b>.</p><br><br>"
         } else {
           node.innerHTML = "<h3>Incorrect!</h3><br><br>"
         }
