@@ -29,9 +29,9 @@
         node = document.createElement('div')
         node.setAttribute('id', 'solved-panel')
         if (answer == normalize_puzzle_answer(right_answer)) {
-          node.innerHTML = "<h3>Solved!</h3><p class=\x22lead text-primary \x22>The answer was <b>" + right_answer + "</b></p><p class=\x22lead text-primary \x22>Congratulations on solving the META!</p><br><br>"
+          node.innerHTML = "<p class=\x22text-success\x22><h3>Solved!</h3><\p><p class=\x22lead text-success \x22>The answer was <b>" + right_answer + "</b></p><p class=\x22lead text-success \x22>Congratulations on solving the META!</p><br><br>"
         } else {
-          node.innerHTML = "<h3>Incorrect!</h3><br><br>"
+          node.innerHTML = "<p class=\x22text-danger\x22><h3>Incorrect!</h3><br><br></p>"
         }
 
         // Inject it
